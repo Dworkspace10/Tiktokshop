@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toko Online Sederhana</title>
+  <title>VerLouve - Toko Online</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f9;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,46 +18,90 @@
     }
     .container {
       text-align: center;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease;
+      max-width: 350px;
+      width: 90%;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      color: #ee4d2d;
+      margin-bottom: 10px;
     }
     h1 {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       color: #333;
+      font-weight: 600;
+      font-size: 20px;
     }
     .btn {
-      display: block;
-      width: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 260px;
       margin: 15px auto;
-      padding: 15px;
-      font-size: 18px;
-      font-weight: bold;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none;
       color: white;
-      border-radius: 10px;
-      transition: 0.3s;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .btn img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      background: white;           /* biar lebih kontras */
+      border-radius: 6px;          /* rounded biar halus */
+      padding: 3px;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     .btn-wa {
       background: #25D366;
     }
     .btn-wa:hover {
       background: #1ebe5c;
+      transform: translateY(-3px);
     }
     .btn-shopee {
       background: #ee4d2d;
     }
     .btn-shopee:hover {
       background: #d84327;
+      transform: translateY(-3px);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Selamat Datang di Toko Kami</h1>
-    <a href="https://wa.me/6287880575397" target="_blank" class="btn btn-wa">Chat via WhatsApp</a>
-    <a href="https://id.shp.ee/dj8cV3u" target="_blank" class="btn btn-shopee">Belanja di Shopee</a>
+    <!-- Nama Toko -->
+    <div class="logo">VerLouve</div>
+    <h1>✨ Selamat Datang di Toko Kami ✨</h1>
+    
+    <!-- Tombol WhatsApp -->
+    <a href="https://wa.me/6287880575397" target="_blank" class="btn btn-wa">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+      Chat via WhatsApp
+    </a>
+    
+    <!-- Tombol Shopee (pakai file lokal) -->
+    <a href="https://id.shp.ee/dj8cV3u" target="_blank" class="btn btn-shopee">
+      <img src="shopee-seeklogo.png" alt="Shopee Logo">
+      Belanja di Shopee
+    </a>
   </div>
 </body>
 </html>
